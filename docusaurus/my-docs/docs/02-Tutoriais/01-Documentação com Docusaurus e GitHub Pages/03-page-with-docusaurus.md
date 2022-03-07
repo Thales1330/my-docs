@@ -1,51 +1,16 @@
 ---
-id: doc-docusaurus-github
-title: Documentação com Docusaurus e GitHub Pages
+id: page-with-docusaurus
+title: Página web com docusaurus
 ---
 
-# Documentação com Docusaurus e GitHub Pages
-
-## Objetivo
-o objetivo desse tutorial é apresentar o passo a passo para criar uma página de documentação com [docusaurus](https://docusaurus.io/) exatamente como esse daqui! Além disso, será apresentado como hospedá-lo no [GitHub Pages](https://pages.github.com/) de forma gratuita!
-
-:::note Nota
-Todo o processo descrito é para Windows, mas pode ser facilmente adaptado para outro OS.
-::: 
-
-## Pré-requisitos
-- [Node.js](https://nodejs.org/en/download/);
-- [Git](https://git-scm.com/) ou [GitHub Desktop](https://desktop.github.com/) (prefiro a segunda opção);
-- Um repositóriocriado  no [GitHub](https://github.com/);
-- [Visual Studio Code](https://code.visualstudio.com/) (opcional).
-
-:::caution Atenção!
-Será utilizado o [GitHub Desktop](https://desktop.github.com/) nesse tutorial.
-:::
-
-## Criando um repositório no GitHub e clonando no seu computador
-Para criar o repositório são passos simples:
-1. Acesse o [GitHub](https://github.com/) e crie uma conta caso não tenha uma;
-2. Na aba "Repositories" clique em "New";
-3. Insira o nome do repositório, marque-o como **Public** e crie o repositório;  
-    :::tip Dica!
-    Escolha uma das licenças padrão nesse passo se achar importante.
-    :::
-
-Pronto! Seu repositório está criado e pronto para ser clonado.  
-Para isso, vá no **GitHub Desktop** já configurado com as suas credenciais, no menu `File > Clone Repository...` e selecione o seu repositório recém criado para clonar na aba "GitHub.com". Selecione a pasta onde ficará o repositório e clique em "Clone".  
-:::note Nota
-A pasta selecionada nesse passo será agora mencionada como `${RepoDir}` no restante do tutorial.
-:::  
-De forma alternativa, no mesmo menu, na aba "URL" cole o endereço do repositório.
-
-## Criando um site de documentação com docusaurus
+## Gerando uma página com docusaurus
 Vá até a pasta do repositório no seu computador `${RepoDir}` e crie uma pasta `docusaurus`. Esse passo é importante para organização do seu projeto!  
 Na pasta `${RepoDir}\docusaurus\` vá até a barra de navegação do Windows Explorer e digite `cmd`, isso irá abrir o Prompt de Comando ou o Power Shell. Crie um novo site padrão digitando:
 ~~~bash
 npx create-docusaurus@latest meu-site classic
 ~~~
 
-:::note Nota
+:::info Nota
 Usei aqui o nome genérico "meu-site", substitua pelo nome de sua preferência no comando acima.
 :::
 
@@ -113,7 +78,7 @@ As personalizações da página principal que não estão presentes no arquivo `
 No primeiro arquivo poderão ser alterados os textos de descrição no centro da página e o segundo arquivo é alterado o texto do botão de acesso à documentação (podem ser inseridos outros botões se necessário).
 
 ## Criando a documentação
-Toda a documentação é realizada na pasta `${RepoDir}\docusaurus\meu-site\docs\`. Os arquivos são inseridos em Markdown (`.md`). Um tutorial básico sobre como escrever arquivos Markdown pode ser acessado [clicando aqui](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). Recursos adicionais do doccusaurus podem ser [acessados aqui](https://docusaurus.io/pt-BR/docs/markdown-features).
+Toda a documentação é realizada na pasta `${RepoDir}\docusaurus\meu-site\docs\`. Os arquivos são inseridos em Markdown (`.md`). Um tutorial básico sobre como escrever arquivos Markdown pode ser acessado [clicando aqui](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). Recursos adicionais do docusaurus podem ser [acessados aqui](https://docusaurus.io/pt-BR/docs/markdown-features).
 
 Todos os arquivos `.md` devem ficar dentro da pasta `docs`. Por exemplo, ao criar um novo documento chamado `ola-mundo.md` a estrutura irá ficar da seguinte forma:
 ~~~bash
@@ -229,34 +194,16 @@ module.exports = {
 
 Com isso, será possível imprimir belas equações 😁:
 $$
-\oint \vec{E}\cdot d\vec{A}= \frac{q_{\mathrm{enc}}}{\varepsilon_0}\\
-\oint \vec{B}\cdot d\vec{A}=0\\
-\oint \vec{E}\cdot d\vec{s}= -\frac{d\Phi_B}{d t}\\
+\oint \vec{E}\cdot d\vec{A}= \frac{q_{\mathrm{enc}}}{\varepsilon_0}
+$$
+$$
+\oint \vec{B}\cdot d\vec{A}=0
+$$
+$$
+\oint \vec{E}\cdot d\vec{s}= -\frac{d\Phi_B}{d t}
+$$
+$$
 \oint \vec{B}\cdot d\vec{s}= \mu_0\varepsilon_0\frac{d\Phi_E}{d t}+\mu_0i_{\mathrm{enc}}
 $$
 
-Acesse o código fonte dessas equações [aqui](../Engenharia%20El%C3%A9trica/maxwell-eq-latex).
-
-## Construindo o site
-Finalmente, após a configuração, personalização e inserção da documentação, estamos aptos a construir a página. O docusaurus é um gerador de site estático, logo nós devemos gerar o site em uma pasta com conteúdo estático antes de enviar para o GitHub Pages para que possa ser acessado. Para gerar o site:
-~~~bash
-npm run build
-~~~
-
-Os arquivos são gerados na pasta `${RepoDir}\docusaurus\meu-site\build\`, que pode ser copiada para qualquer hospedagem de site estático como o GitHub Pages.
-
-## Enviando a página e configurando o GitHub Pages
-Primeiramente, vamos enviar todo o conteúdo da página gerada pelo docusaurus para o GitHub:
-1. Crie uma pasta `docs` no diretório do repositório: `${RepoDir}\docs`. Copie **todo** o conteúdo da pasta `${RepoDir}\docusaurus\meu-site\build\` para dentro da pasta recém criada;
-2. Abra o GitHub Desktop, selecione o seu repositório na parte superior esquerda (caso já não esteja selecionado);
-3. Na parte inferior esquerda dê um *Commit to main* nas suas modificações:  
-  ![](../img/commit.png)
-4. Após isso, dê Push para seu código ser enviado para o repositório.
-
-Com o navegador web, acesse o seu repositório no GitHub e vá na aba "Settings". No menu lateral, acesse a opção "Pages". Defina que o código fonte da sua página está na pasta `docs`:
-
-![](../img/gh-page-config.png)
-
-Pronto! Sua página estará disponível em poucos minutos agora!
-
-O site será do tipo `https://NomeDeUsuario.github.io/nome-do-repo/`.
+Acesse o código fonte dessas equações [aqui](../../Engenharia%20El%C3%A9trica/maxwell-eq-latex).

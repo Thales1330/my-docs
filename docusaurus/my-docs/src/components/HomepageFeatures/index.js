@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'O que vou encontrar aqui?',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/detective.svg').default,
     description: (
       <>
         Provavelmente tutoriais e documentações diversas que repetidamente utilizo e acabo
@@ -16,7 +16,7 @@ const FeatureList = [
   },
   {
     title: 'Qual o foco da documentação?',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/books.svg').default,
     description: (
       <>
         Provavelmente vou inserir processos de configurações que geralmente são necessários
@@ -26,7 +26,7 @@ const FeatureList = [
   },
   {
     title: 'Quem escreveu isso?',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/who.svg').default,
     description: (
       <>
         Meu nome é Thales, sou Prof. Dr. na Universidade Federal de Uberlândia.
