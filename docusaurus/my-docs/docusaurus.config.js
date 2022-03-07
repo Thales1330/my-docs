@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -13,8 +15,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'thales1330', // Usually your GitHub org/user name.
-  projectName: 'Meus docs', // Usually your repo name.
+  organizationName: 'thales1330', 
+  projectName: 'Meus docs', 
 
   presets: [
     [
@@ -23,9 +25,11 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/Thales1330/my-docs/tree/main/docs/docs/',
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
+        blog: false,
         //blog: {
         //  showReadingTime: true,
         //  // Please change this to your repo.
@@ -35,8 +39,18 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        
       }),
     ],
+  ],
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themeConfig:
