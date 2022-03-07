@@ -57,7 +57,7 @@ Em `presets` você deve alterar o campo `editUrl` em `docs` para o seu repositó
 docs: {
     sidebarPath: require.resolve('./sidebars.js'),
     // highlight-start
-    editUrl: 'https://github.com/SeuNomeDeUsuario/nome-do-repo/tree/main/docs/docs/',
+    editUrl: 'https://github.com/SeuNomeDeUsuario/nome-do-repo/tree/main/docusaurus/meu-site',
     // highlight-end
     },
 ~~~

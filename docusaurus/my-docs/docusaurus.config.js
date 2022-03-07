@@ -25,7 +25,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/Thales1330/my-docs/tree/main/docs/docs/',
+          editUrl: 'https://github.com/Thales1330/my-docs/tree/main/docusaurus/my-docs',
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
