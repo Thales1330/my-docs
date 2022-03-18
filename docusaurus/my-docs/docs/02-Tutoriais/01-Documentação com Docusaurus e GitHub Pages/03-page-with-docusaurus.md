@@ -5,7 +5,7 @@ title: Página web com docusaurus
 
 ## Gerando uma página com docusaurus
 Vá até a pasta do repositório no seu computador `${RepoDir}` e crie uma pasta `docusaurus`. Esse passo é importante para organização do seu projeto!  
-Na pasta `${RepoDir}\docusaurus\` vá até a barra de navegação do Windows Explorer e digite `cmd`, isso irá abrir o Prompt de Comando ou o Power Shell. Crie um novo site padrão digitando:
+Na pasta `${RepoDir}\docusaurus\` vá até à barra de navegação do Windows Explorer e digite `cmd`, isso irá abrir o Prompt de Comando ou o Power Shell. Crie um site padrão digitando:
 ~~~bash
 npx create-docusaurus@latest meu-site classic
 ~~~
@@ -20,10 +20,17 @@ cd meu-site
 npx docusaurus start
 ~~~
 
-Pronto! Seu site genérico já está criado e rodando em `http://localhost:3000` pela magia dos desenvovedores do [docusaurus](https://docusaurus.io/) e [Node.js](https://nodejs.org/en/download/)!
+Pronto! Seu site genérico já está criado e rodando em `http://localhost:3000/meu-site` pela magia dos desenvovedores do [docusaurus](https://docusaurus.io/) e [Node.js](https://nodejs.org/en/download/)!
+
+:::caution Importante!
+Para iniciar uma nova sessão do docusaurus após a criação do site vá até à pasta `${RepoDir}\docusaurus\meu-site`, na barra de navegação do Windows Explorer e digite `cmd` para abrir o Prompt de Comando ou o Power Shell. Inicie a sessão digitando:
+~~~bash
+npm run docusaurus start
+~~~
+:::
 
 ## Personalizando a página
-Antes de mais nada, é importante notar que quaisquer modificações nos arquivos fontes são automaticamente alteradas em `http://localhost:3000`, o que ajuda bastante. Os arquivos devem ser modificados em `${RepoDir}\docusaurus\meu-site\`.
+Antes de mais nada, é importante notar que quaisquer modificações nos arquivos-fontes são automaticamente alteradas em `http://localhost:3000`, o que ajuda bastante. Os arquivos devem ser modificados em `${RepoDir}\docusaurus\meu-site\`.
 
 :::tip Dica!
 Você pode usar o [Visual Studio Code](https://code.visualstudio.com/) para realizar as modificações e criação das páginas. Basta ir em `Arquivo > Abrir Pasta` e abrir o caminho `${RepoDir}\docusaurus\meu-site\`.
@@ -61,7 +68,7 @@ docs: {
     // highlight-end
     },
 ~~~
-Note que esse caminho **deve** ser personalizado e dependende dos nomes das pastas escolhidos no processo de instalação e criação de conta.
+Note que esse caminho **deve** ser personalizado e dependente dos nomes das pastas escolhidos no processo de instalação e criação de conta.
 
 Ainda em `presets`, o campo `blog` deve ser alterado da mesma forma que o `docs`. Caso não utilize esse recurso é possível desativar o *plugin* de blog inserindo:
 ~~~js title="docusaurus.config.js"
