@@ -77,6 +77,11 @@ const config = {
           },
         ],
       },
+      algolia: {
+        apiKey: 'de422be2cbb86f691a8e075918df9738',
+        indexName: 'my-docs',
+        appId: 'X1U3KCSYP8',
+      },
       footer: {
         style: 'dark',
         links: [

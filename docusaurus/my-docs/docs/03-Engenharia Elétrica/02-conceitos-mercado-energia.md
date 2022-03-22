@@ -4,7 +4,7 @@ title: Conceitos básicos de mercado e operação de energia
 ---
 
 # Conceitos básicos de Mercado e Operação de Energia Elétrica
-Aqui são sumarizados alguns conceitos básicos relacionados ao mercado de energia elétrica. Os conceitos são apresentados e podem ser encontrados pela ferramenta de busca (*Algolia ainda não liberou o repositório 😢*) ou encontrado no menu lateral.
+Aqui são sumarizados alguns conceitos básicos relacionados ao mercado de energia elétrica. Os conceitos são apresentados e podem ser encontrados pela ferramenta de busca ou encontrado no menu lateral.
 
 ## Mecanismo de Realocação de Energia (MRE)
 O Mecanismo de Realocação de Energia é um **mecanismo financeiro** de compartilhamento dos riscos hidrológicos associados à **otimização eletroenergética do SIN** no que diz respeito ao despacho centralizado das unidades de geração de energia elétrica realizado pelo ONS. Os agentes proprietários de usinas sujeitas ao despacho centralizado pelo ONS **não tem controle sobre seu nível de geração**, independentemente de seus compromissos de venda de energia realizados com base nas garantias físicas.
