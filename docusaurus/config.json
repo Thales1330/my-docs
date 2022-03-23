@@ -1,5 +1,5 @@
 {
-  "_comment": "An adittional file '.env' is necessary to store the database credentials: APPLICATION_ID=??? API_KEY=???",
+  "_comment": "An adittional file '.env' is necessary to store the database credentials: APPLICATION_ID=??? API_KEY=??? (ACLs: addObject, deleteIndex, editSettings))",
   "index_name": "my-docs",
   "start_urls": [
     "https://thales1330.github.io/my-docs/"
