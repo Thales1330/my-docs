@@ -12,4 +12,3 @@ Provavelmente vou inserir processos de configurações que geralmente são neces
 ## Quem escreveu isso aqui?
 Meu nome é [Thales](http://lattes.cnpq.br/7597648880114358), sou Prof. Dr. na [Universidade Federal de Uberlândia](https://ufu.br/).
 
-
